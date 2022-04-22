@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script>
+        $.get('a20220420-03-basic.txt', function(data){
+            
+            const ar = data.split("\n");
+            const ar2 = ar.map(t => t.trim());
+            
+
+            const data_ar = [];
+            let item = [];
+            for(let i=0; i<ar2.length; i++){
+                const l = ar2[i];
+                if(l!==''){
+                    item.push(l);
+                } else {
+                    data_ar.push(item);
+                    item = [];
+                }
+
+            }
+            console.log(data_ar);
+
+        }, 'text');
+
+    </script>
+</body>
+</html>
