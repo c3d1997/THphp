@@ -98,7 +98,7 @@ if ($totalPages > 0) {
             <?php foreach ($output['rows'] as $r) : ?>
             <tr>
                 <td>
-                    <a href="#">
+                    <a href="javascript: delete_it(<?= $r['sid'] ?>)">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
                 </td>
@@ -114,7 +114,7 @@ if ($totalPages > 0) {
                 <td><?= strip_tags($r['address']) ?></td>
                 -->
                 <td>
-                    <a href="#">
+                    <a href="ab-edit.php?sid=<?= $r['sid'] ?>">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </a>
                 </td>
@@ -127,5 +127,11 @@ if ($totalPages > 0) {
 
 </div>
 <?php include __DIR__ . '/parts/scripts.php' ?>
-<script></script>
+<script>
+function delete_it(sid) {
+    if (confirm(`確定要刪除編號為 ${sid} 的資料嗎?`)) {
+        location.href = `ab-delete.php?sid=${sid}`;
+    }
+}
+</script>
 <?php include __DIR__ . '/parts/html-foot.php' ?>
