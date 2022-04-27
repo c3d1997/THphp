@@ -24,7 +24,7 @@ $stmt->execute([
     $_POST['name'],
     $_POST['email'],
     $_POST['mobile'],
-    $_POST['birthday'],
+    empty($_POST['birthday']) ? null : $_POST['birthday'],
     $_POST['address'],
 ]);
 
