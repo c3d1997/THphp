@@ -1,4 +1,5 @@
 <?php
+require './parts/admin-required.php';
 require './parts/connect-db.php';
 $pageName = 'ab-add';
 $title = '新增通訊錄資料';

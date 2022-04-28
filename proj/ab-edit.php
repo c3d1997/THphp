@@ -1,4 +1,5 @@
 <?php
+require './parts/admin-required.php';
 require './parts/connect-db.php';
 $title = '修改通訊錄資料';
 

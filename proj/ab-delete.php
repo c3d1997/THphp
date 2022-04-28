@@ -1,4 +1,5 @@
 <?php
+require './parts/admin-required.php';
 require './parts/connect-db.php';
 //echo $_SERVER['HTTP_REFERER'];
 //exit;

@@ -1,4 +1,5 @@
 <?php
+session_start();
 $pageName = 'index';
 $title = '小新的首頁';
 ?>
