@@ -1,25 +1,28 @@
+<?php
+session_start(); // 啟用 session 功能
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<?php
-    $a = "2a";
-    $b = 23;
+    <div>
 
-    echo $a + $b;
-    echo '<br>';
+        <?php
+        $_SESSION['user'] = 'shin';
 
-    echo $a * $b;
-    echo '<br>';
+        echo $_SESSION['user'];
+        ?>
 
-    echo " $a + $b <br>";
-    echo " \$a = $a <br>";
-    echo ' $a + $b <br>';
-?>
+
+
+    </div>
 </body>
+
 </html>
